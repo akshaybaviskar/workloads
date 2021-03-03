@@ -52,6 +52,9 @@ using namespace std;
 void* entry_pt(void*);
 
 static int ___main (int argc, char * argv[]) {
+
+printf("PID : %d\n",getpid());
+
 #ifdef PARSEC_VERSION
 #define __PARSEC_STRING(x) #x
 #define __PARSEC_XSTRING(x) __PARSEC_STRING(x)
@@ -101,7 +104,7 @@ static int ___main (int argc, char * argv[]) {
 
 	//now that we've read in the commandline, run the program
 	netlist my_netlist(filename);
-        #define CONFIG_SHM_FILE_NAME "/tmp/alloctest-bench"
+        #define CONFIG_SHM_FILE_NAME "/tmp/alloctest-canneal"
         FILE *fd2 = fopen(CONFIG_SHM_FILE_NAME ".ready", "w");
         if (fd2 == NULL) {
             printf("unable to create tmp file\n");

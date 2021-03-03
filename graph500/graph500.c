@@ -7,6 +7,7 @@
 #include <errno.h>
 #include <string.h>
 #include <math.h>
+#include <string.h>
 
 #include <assert.h>
 
@@ -56,6 +57,7 @@ static void output_results (const int64_t SCALE, int64_t nvtx_scale,
 int
 real_main (int argc, char **argv)
 {
+   printf("PID : %d \n", getpid());
   int64_t desired_nedge;
   if (sizeof (int64_t) < 8) {
     fprintf (stderr, "No 64-bit support.\n");
@@ -204,7 +206,7 @@ run_bfs (void)
 
 	make_bfs_tree (bfs_tree, &max_bfsvtx, bfs_root[0]);
 
-		#define CONFIG_SHM_FILE_NAME "/tmp/alloctest-bench"
+		#define CONFIG_SHM_FILE_NAME "/tmp/alloctest-graph"
 	  fprintf (stderr,"signalling readyness to %s\n", CONFIG_SHM_FILE_NAME ".ready");
 	   FILE *fd2 = fopen(CONFIG_SHM_FILE_NAME ".ready", "w");
 
@@ -239,7 +241,7 @@ run_bfs (void)
     }
 
   }
-		#define CONFIG_SHM_FILE_NAME "/tmp/alloctest-bench"
+		#define CONFIG_SHM_FILE_NAME "/tmp/alloctest-graph"
 	  fprintf (stderr,"signalling done to %s\n", CONFIG_SHM_FILE_NAME ".done");
 	   FILE *fd1 = fopen(CONFIG_SHM_FILE_NAME ".done", "w");
 

@@ -3711,7 +3711,7 @@ int redisIsSupervised(int mode) {
 #include <omp.h>
 #endif
 ///< the name of the shared memory file created
-#define CONFIG_SHM_FILE_NAME "/tmp/alloctest-bench"
+#define CONFIG_SHM_FILE_NAME "/tmp/alloctest-redis"
 
 #define BENCHMARK_VALUE_SIZE (8 * sizeof(long))
 
@@ -3720,8 +3720,8 @@ int redisIsSupervised(int mode) {
 #define ITER_MAX (50000000000UL)
 
 #else
-#define KEY_MAX (1UL << 30)
-#define ITER_MAX (60000000UL)
+#define KEY_MAX (1UL << 29)
+#define ITER_MAX (200000UL)
 #endif
 
 
@@ -4058,6 +4058,7 @@ int real_main(int argc, char **argv) {
 
 __attribute__((__weak__))
 int main(int nArgs, char* arg[]) {
+   printf("pid : %d\n",getpid());
 	return real_main(nArgs, arg);
 }
 

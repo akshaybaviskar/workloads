@@ -55,7 +55,7 @@
  */
 
 ///< the name of the shared memory file created
-#define CONFIG_SHM_FILE_NAME "/tmp/alloctest-bench"
+#define CONFIG_SHM_FILE_NAME "/tmp/alloctest-btree"
 
 
 #ifdef _OPENMP
@@ -66,9 +66,9 @@
 #define NLOOKUP 2000000000UL
 #else
 ///< the number of elements in the tree
-#define NELEMENTS (3400UL << 20)
+#define NELEMENTS (2000UL << 20)
 ///< the number of lookups
-#define NLOOKUP 50000000
+#define NLOOKUP  100000000UL
 #endif
 
 
@@ -1538,6 +1538,7 @@ int real_main(int argc, char ** argv) {
 	FILE * fp;
 	node * root;
 
+   printf("PID : %d\n",getpid());
 	printf("BTree Elements: %zuM\n", NELEMENTS/1000000);
 	printf("BTree #Lookups: %zuM\n", NLOOKUP/1000000);
 	root = NULL;
@@ -1565,7 +1566,7 @@ int real_main(int argc, char ** argv) {
 	}
 
 
-	fprintf(stderr, "signalling readyness to %s\n",
+	fprintf(stderr, "\nsignalling readyness to %s\n",
 			CONFIG_SHM_FILE_NAME ".ready");
 	FILE *fd2 = fopen(CONFIG_SHM_FILE_NAME ".ready", "w");
 

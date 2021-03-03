@@ -81,7 +81,7 @@ typedef long long mstime_t; /* millisecond time type. */
 #define CONFIG_DEFAULT_HZ        10      /* Time interrupt calls/sec. */
 #define CONFIG_MIN_HZ            1
 #define CONFIG_MAX_HZ            500
-#define CONFIG_DEFAULT_SERVER_PORT        6379    /* TCP port */
+#define CONFIG_DEFAULT_SERVER_PORT        6389    /* TCP port */
 #define CONFIG_DEFAULT_TCP_BACKLOG       511     /* TCP listen backlog */
 #define CONFIG_DEFAULT_CLIENT_TIMEOUT       0       /* default client timeout: infinite */
 #define CONFIG_DEFAULT_DBNUM     16

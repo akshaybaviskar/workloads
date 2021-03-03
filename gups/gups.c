@@ -37,7 +37,6 @@ extern FILE *opt_file_out;
 #define NUPDATE (1UL << 30)
 #endif
 
-
 ///< parameters for ther andom table
 #define POLY 0x0000000000000007UL
 #define PERIOD 1317624576693539401L
@@ -81,12 +80,14 @@ HPCC_starts(int64_t n)
 }
 
 ///< the name of the shared memory file created
-#define CONFIG_SHM_FILE_NAME "/tmp/alloctest-bench"
+#define CONFIG_SHM_FILE_NAME "/tmp/alloctest-gups"
 
 
 int real_main(int argc, char *argv[]);
 int real_main(int argc, char *argv[])
 {
+    //NUPDATE = 1 << strtoul(argv[2], NULL, 10);
+    printf("NUPDATE set to %ul %x\n", strtoul(argv[2], NULL, 10), NUPDATE);
     size_t mem = ((size_t)64UL << 30);
     if (argc == 2) {
         mem = strtoull(argv[1], NULL, 10) << 30;    
