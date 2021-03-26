@@ -1,0 +1,16 @@
+
+ Performance counter stats for process id '28348':
+
+       16275997475      inst_retired.any_p:u                                          (49.83%)
+        3607100495      mem_inst_retired.all_loads:u                                     (49.83%)
+        1054209832      mem_inst_retired.all_stores:u                                     (49.83%)
+           3598577      dtlb_store_misses.stlb_hit:u                                     (49.96%)
+          82372892      dtlb_load_misses.stlb_hit:u                                     (50.10%)
+              5252      mem_inst_retired.stlb_miss_loads:u                                     (40.14%)
+            171573      mem_inst_retired.stlb_miss_stores:u                                     (40.14%)
+          30869634      dtlb_store_misses.walk_pending:u                                     (40.14%)
+          43130856      dtlb_load_misses.walk_pending:u                                     (40.00%)
+        7199139708      cycles:u                                                      (39.86%)
+
+       2.830393750 seconds time elapsed
+
