@@ -8,6 +8,7 @@
 #include <string.h>
 #include <math.h>
 #include <string.h>
+#include <numa.h>
 
 #include <assert.h>
 
@@ -57,6 +58,7 @@ static void output_results (const int64_t SCALE, int64_t nvtx_scale,
 int
 real_main (int argc, char **argv)
 {
+   numa_run_on_node(0);
    printf("PID : %d \n", getpid());
   int64_t desired_nedge;
   if (sizeof (int64_t) < 8) {
@@ -210,6 +212,7 @@ run_bfs (void)
 	  fprintf (stderr,"signalling readyness to %s\n", CONFIG_SHM_FILE_NAME ".ready");
 	   FILE *fd2 = fopen(CONFIG_SHM_FILE_NAME ".ready", "w");
 
+   numa_run_on_node(1);
 	  if (fd2 == NULL) {
 	      fprintf (stderr, "ERROR: could not create the shared memory file descriptor\n");
 	      exit(-1);
