@@ -1,0 +1,14 @@
+NO signalling readyness to /tmp/alloctest-bench.ready
+signalling readyness to /tmp/alloctest-graph.ready
+signalling done to /tmp/alloctest-graph.done
+
+ Performance counter stats for './bench_graph500_st -s 28':
+
+       11700605937      mem_load_l3_miss_retired.remote_dram                                     (80.00%)
+     3900925259282      mem_inst_retired.all_loads:u                                     (80.00%)
+     2213843131073      mem_inst_retired.all_stores:u                                     (80.00%)
+       38456824744      mem_inst_retired.stlb_miss_loads:u                                     (80.00%)
+       17781041951      mem_inst_retired.stlb_miss_stores:u                                     (80.00%)
+
+   10158.647834737 seconds time elapsed
+

@@ -5,3 +5,5 @@
 *.o-mt
 *.o-omp-omp
 ~            
+canneal_large
+canneal_small

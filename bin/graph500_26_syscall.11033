@@ -1,0 +1,124 @@
+09:52:11.501090 execve("./bench_graph500_st", ["./bench_graph500_st", "-s", "26"], 0x7ffc42126410 /* 38 vars */) = 0
+09:52:11.501982 brk(NULL)               = 0x2686000
+09:52:11.502064 brk(0x2687200)          = 0x2687200
+09:52:11.502164 arch_prctl(ARCH_SET_FS, 0x26868c0) = 0
+09:52:11.502245 uname({sysname="Linux", nodename="mcastle5", ...}) = 0
+09:52:11.502329 readlink("/proc/self/exe", "/home/akshaybavisk/work/vmitosis"..., 4096) = 64
+09:52:11.502474 brk(0x26a8200)          = 0x26a8200
+09:52:11.502550 brk(0x26a9000)          = 0x26a9000
+09:52:11.502659 access("/etc/ld.so.nohwcap", F_OK) = -1 ENOENT (No such file or directory)
+09:52:11.502773 openat(AT_FDCWD, "/proc/self/status", O_RDONLY) = 3
+09:52:11.502879 fstat(3, {st_mode=S_IFREG|0444, st_size=0, ...}) = 0
+09:52:11.502973 read(3, "Name:\tbench_graph500_\nUmask:\t000"..., 1024) = 1024
+09:52:11.503103 read(3, "000,00000000,00000000,00000000,0"..., 1024) = 337
+09:52:11.503189 close(3)                = 0
+09:52:11.503268 openat(AT_FDCWD, "/sys/devices/system/node", O_RDONLY|O_NONBLOCK|O_CLOEXEC|O_DIRECTORY) = 3
+09:52:11.503361 fstat(3, {st_mode=S_IFDIR|0755, st_size=0, ...}) = 0
+09:52:11.503449 getdents(3, /* 11 entries */, 32768) = 344
+09:52:11.503563 openat(AT_FDCWD, "/sys/devices/system/node/node0/meminfo", O_RDONLY) = 4
+09:52:11.503654 fstat(4, {st_mode=S_IFREG|0444, st_size=4096, ...}) = 0
+09:52:11.503743 read(4, "Node 0 MemTotal:       131704804"..., 4096) = 1071
+09:52:11.503865 read(4, "", 4096)       = 0
+09:52:11.503941 close(4)                = 0
+09:52:11.504021 openat(AT_FDCWD, "/sys/devices/system/node/node1/meminfo", O_RDONLY) = 4
+09:52:11.504109 fstat(4, {st_mode=S_IFREG|0444, st_size=4096, ...}) = 0
+09:52:11.504188 read(4, "Node 1 MemTotal:       132095084"..., 4096) = 1071
+09:52:11.504300 read(4, "", 4096)       = 0
+09:52:11.504376 close(4)                = 0
+09:52:11.504451 getdents(3, /* 0 entries */, 32768) = 0
+09:52:11.504527 close(3)                = 0
+09:52:11.504602 sched_getaffinity(0, 512, [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31]) = 8
+09:52:11.504710 openat(AT_FDCWD, "/sys/devices/system/cpu", O_RDONLY|O_NONBLOCK|O_CLOEXEC|O_DIRECTORY) = 3
+09:52:11.504801 fstat(3, {st_mode=S_IFDIR|0755, st_size=0, ...}) = 0
+09:52:11.504881 getdents(3, /* 49 entries */, 32768) = 1472
+09:52:11.505046 getdents(3, /* 0 entries */, 32768) = 0
+09:52:11.505121 close(3)                = 0
+09:52:11.505197 openat(AT_FDCWD, "/proc/self/status", O_RDONLY) = 3
+09:52:11.505285 fstat(3, {st_mode=S_IFREG|0444, st_size=0, ...}) = 0
+09:52:11.505364 read(3, "Name:\tbench_graph500_\nUmask:\t000"..., 1024) = 1024
+09:52:11.505487 read(3, "000,00000000,00000000,00000000,0"..., 1024) = 337
+09:52:11.505582 read(3, "", 1024)       = 0
+09:52:11.505658 close(3)                = 0
+09:52:11.505744 gettimeofday({tv_sec=1616838731, tv_usec=505770}, NULL) = 0
+09:52:11.505826 fstat(1, {st_mode=S_IFCHR|0620, st_rdev=makedev(136, 3), ...}) = 0
+09:52:11.505911 write(1, "./bench_graph500_st -s 26 \n", 27) = 27
+09:52:11.506022 get_mempolicy(NULL, NULL, 0, NULL, 0) = 0
+09:52:11.506127 write(1, "prog_argv[0]=./bench_graph500_st"..., 33) = 33
+09:52:11.506229 write(1, "prog_argv[1]=-s\n", 16) = 16
+09:52:11.506326 write(1, "prog_argv[2]=26\n", 16) = 16
+09:52:11.506434 write(2, "NO signalling readyness to /tmp/"..., 54) = 54
+09:52:11.506531 write(1, "<benchmark exec=\"./bench_graph50"..., 39) = 39
+09:52:11.506629 write(1, "<config>\n", 9) = 9
+09:52:11.506730 write(1, "  <openmp>off</openmp>  <memsize"..., 68) = 68
+09:52:11.506827 write(1, "  <data>0</data>  <pte>0</pte>  "..., 45) = 45
+09:52:11.506923 write(1, "  <interference>0</interference>"..., 33) = 33
+09:52:11.507017 write(1, "</config>\n", 10) = 10
+09:52:11.507112 rt_sigaction(SIGUSR1, {sa_handler=0x402a40, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x408bc0}, NULL, 8) = 0
+09:52:11.507205 write(1, "<run>\n", 6)  = 6
+09:52:11.507323 openat(AT_FDCWD, "/sys/devices/system/node/node0/cpumap", O_RDONLY) = 3
+09:52:11.507419 fstat(3, {st_mode=S_IFREG|0444, st_size=4096, ...}) = 0
+09:52:11.507519 read(3, "00ff00ff\n", 4096) = 9
+09:52:11.507604 close(3)                = 0
+09:52:11.507683 sched_setaffinity(0, 8, [0, 1, 2, 3, 4, 5, 6, 7, 16, 17, 18, 19, 20, 21, 22, 23]) = 0
+09:52:11.507941 getpid()                = 11033
+09:52:11.508058 write(1, "PID : 11033 \n", 13) = 13
+09:52:11.508178 write(1, "Graph500 with scale 0\n", 22) = 22
+09:52:11.508271 clock_gettime(CLOCK_MONOTONIC, {tv_sec=689206, tv_nsec=771324727}) = 0
+09:52:11.508355 write(1, "allocate edges\n", 15) = 15
+09:52:11.508441 write(1, "Allocating 8192 MB\n", 19) = 19
+09:52:11.508526 mmap(NULL, 17179873280, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fa55c527000
+10:20:38.875164 clock_gettime(CLOCK_MONOTONIC, {tv_sec=690914, tv_nsec=138306081}) = 0
+10:20:38.875366 clock_gettime(CLOCK_MONOTONIC, {tv_sec=690914, tv_nsec=138423925}) = 0
+10:20:40.527046 write(1, "Allocating 1023 MB\n", 19) = 19
+10:20:40.527267 mmap(NULL, 9663680512, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fa31c526000
+10:21:00.021412 write(1, "Allocating 16971 MB\n", 20) = 20
+10:21:00.021613 mmap(NULL, 26385350656, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f9cf7a1e000
+10:24:16.016546 sysinfo({uptime=691132, loads=[327744, 327680, 324576], totalram=270131085312, freeram=136183185408, sharedram=86016, bufferram=762499072, totalswap=149947412480, freeswap=149849174016, procs=551, totalhigh=0, freehigh=0, mem_unit=1}) = 0
+10:24:16.021582 mmap(NULL, 438272, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f9cf79b3000
+10:24:16.028355 munmap(0x7f9cf79b3000, 438272) = 0
+10:24:16.031125 brk(0x26cc000)          = 0x26cc000
+10:24:16.186916 brk(0x2715000)          = 0x2715000
+10:24:16.367256 mmap(NULL, 1363968, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f9cf78d1000
+10:24:16.390020 munmap(0x7f9cf78d1000, 1363968) = 0
+10:24:19.692639 mmap(NULL, 1368064, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f9cf78d0000
+10:24:19.715662 munmap(0x7f9cf78d0000, 1368064) = 0
+10:24:21.351425 mmap(NULL, 1372160, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f9cf78cf000
+10:24:21.374591 munmap(0x7f9cf78cf000, 1372160) = 0
+10:24:22.433098 brk(0x27f9000)          = 0x27f9000
+10:24:29.563478 mmap(NULL, 4329472, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f9cf75fd000
+10:24:29.641359 munmap(0x7f9cf75fd000, 4329472) = 0
+10:24:39.128373 brk(0x2acb000)          = 0x2acb000
+10:26:01.689464 mmap(NULL, 13676544, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f9cf6d13000
+10:26:01.971367 munmap(0x7f9cf6d13000, 13676544) = 0
+10:27:09.542929 clock_gettime(CLOCK_MONOTONIC, {tv_sec=691304, tv_nsec=806073630}) = 0
+10:27:09.543146 write(1, "Allocate bfs_tree\n", 18) = 18
+10:27:09.543262 write(1, "Allocating 512 MB\n", 18) = 18
+10:27:09.543335 mmap(NULL, 9126809600, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f9ad7a1d000
+10:27:09.667558 write(1, "Allocate has_adj\n", 17) = 17
+10:27:09.667762 write(1, "Allocating 256 MB\n", 18) = 18
+10:27:09.667846 mmap(NULL, 8858374144, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f98c7a1c000
+10:27:09.730159 write(1, "================================"..., 47) = 47
+10:27:38.668128 munmap(0x7f98c7a1c000, 8858374144) = 0
+10:27:38.668837 write(1, "Allocating 511 MB\n", 18) = 18
+10:27:38.668950 mmap(NULL, 9126809600, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f98b7a1c000
+10:28:00.693561 munmap(0x7f98b7a1c000, 9126809600) = 0
+10:28:00.694899 write(2, "signalling readyness to /tmp/all"..., 51) = 51
+10:28:00.695027 openat(AT_FDCWD, "/tmp/alloctest-graph.ready", O_WRONLY|O_CREAT|O_TRUNC, 0666) = 3
+10:28:00.695188 openat(AT_FDCWD, "/sys/devices/system/node/node1/cpumap", O_RDONLY) = 4
+10:28:00.695278 fstat(4, {st_mode=S_IFREG|0444, st_size=4096, ...}) = 0
+10:28:00.695356 read(4, "ff00ff00\n", 4096) = 9
+10:28:00.695435 close(4)                = 0
+10:28:00.695503 sched_setaffinity(0, 8, [8, 9, 10, 11, 12, 13, 14, 15, 24, 25, 26, 27, 28, 29, 30, 31]) = 0
+10:28:00.695822 nanosleep({tv_sec=0, tv_nsec=250000}, NULL) = 0
+10:28:00.696313 clock_gettime(CLOCK_MONOTONIC, {tv_sec=691355, tv_nsec=959373199}) = 0
+10:28:00.696418 write(1, "Allocating 511 MB\n", 18) = 18
+10:28:00.696632 mmap(NULL, 9126809600, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f98b7a1c000
+10:28:35.136150 munmap(0x7f98b7a1c000, 9126809600) = 0
+10:28:35.137472 clock_gettime(CLOCK_MONOTONIC, {tv_sec=691390, tv_nsec=400547522}) = 0
+10:28:35.137600 write(1, "Allocating 1023 MB\n", 19) = 19
+10:28:35.137697 mmap(NULL, 9663680512, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f9897a1c000
+10:29:28.363365 munmap(0x7f9897a1c000, 9663680512) = 0
+10:29:28.365737 write(2, "signalling done to /tmp/alloctes"..., 45) = 45
+10:29:28.365867 openat(AT_FDCWD, "/tmp/alloctest-graph.done", O_WRONLY|O_CREAT|O_TRUNC, 0666) = 4
+10:29:28.366008 exit_group(0)           = ?
+10:29:28.442864 +++ exited with 0 +++

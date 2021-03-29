@@ -1,0 +1,12 @@
+
+ Performance counter stats for './bench_graph500_st -s 27':
+
+        3684280985      mem_load_l3_miss_retired.remote_dram                                     (80.00%)
+     1918681810206      mem_inst_retired.all_loads:u                                     (80.00%)
+     1085471381061      mem_inst_retired.all_stores:u                                     (80.00%)
+        1868195584      mem_inst_retired.stlb_miss_loads:u                                     (80.00%)
+        4065690546      mem_inst_retired.stlb_miss_stores:u                                     (80.00%)
+
+    4354.269802901 seconds time elapsed
+
+
