@@ -1,0 +1,15 @@
+NO signalling readyness to /tmp/alloctest-bench.ready
+
+signalling readyness to /tmp/alloctest-btree.ready
+signalling done to /tmp/alloctest-btree.done
+
+ Performance counter stats for './btree_1000_100':
+
+         150304115      mem_load_l3_miss_retired.remote_dram                                     (80.00%)
+      391335406232      mem_inst_retired.all_loads:u                                     (80.00%)
+      111580338352      mem_inst_retired.all_stores:u                                     (80.00%)
+        2618296069      mem_inst_retired.stlb_miss_loads:u                                     (80.00%)
+          18337752      mem_inst_retired.stlb_miss_stores:u                                     (80.00%)
+
+     757.876837696 seconds time elapsed
+

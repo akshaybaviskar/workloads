@@ -1,0 +1,12 @@
+NO signalling readyness to /tmp/alloctest-bench.ready
+
+ Performance counter stats for './gups_64_32':
+
+            428070      mem_load_l3_miss_retired.remote_dram                                     (80.00%)
+       12900964073      mem_inst_retired.all_loads:u                                     (80.00%)
+       17178052306      mem_inst_retired.all_stores:u                                     (80.00%)
+        7685411658      mem_inst_retired.stlb_miss_loads:u                                     (80.00%)
+         952530276      mem_inst_retired.stlb_miss_stores:u                                     (80.00%)
+
+     468.990709751 seconds time elapsed
+

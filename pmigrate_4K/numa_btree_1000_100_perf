@@ -1,0 +1,15 @@
+NO signalling readyness to /tmp/alloctest-bench.ready
+
+signalling readyness to /tmp/alloctest-btree.ready
+signalling done to /tmp/alloctest-btree.done
+
+ Performance counter stats for './numa_btree_1000_100':
+
+         233823644      mem_load_l3_miss_retired.remote_dram                                     (80.00%)
+      391317958871      mem_inst_retired.all_loads:u                                     (80.00%)
+      111569161666      mem_inst_retired.all_stores:u                                     (80.00%)
+        2664794924      mem_inst_retired.stlb_miss_loads:u                                     (80.00%)
+          18388056      mem_inst_retired.stlb_miss_stores:u                                     (80.00%)
+
+    1064.738759766 seconds time elapsed
+

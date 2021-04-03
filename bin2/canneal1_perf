@@ -1,0 +1,12 @@
+NO signalling readyness to /tmp/alloctest-bench.ready
+
+ Performance counter stats for './bench_canneal_st 1 150000 2000 ../canneal_small 1':
+
+           1122343      mem_load_l3_miss_retired.remote_dram                                     (80.00%)
+      416469376475      mem_inst_retired.all_loads:u                                     (80.00%)
+      133698501555      mem_inst_retired.all_stores:u                                     (80.00%)
+       11136894786      mem_inst_retired.stlb_miss_loads:u                                     (80.00%)
+         233441400      mem_inst_retired.stlb_miss_stores:u                                     (80.00%)
+
+    1703.911042191 seconds time elapsed
+

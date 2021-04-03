@@ -1,0 +1,12 @@
+NO signalling readyness to /tmp/alloctest-bench.ready
+
+ Performance counter stats for './numa_gups_64_32':
+
+         924096706      mem_load_l3_miss_retired.remote_dram                                     (80.00%)
+       12885000302      mem_inst_retired.all_loads:u                                     (80.00%)
+       17179281314      mem_inst_retired.all_stores:u                                     (80.00%)
+        5779858994      mem_inst_retired.stlb_miss_loads:u                                     (80.00%)
+        2433358040      mem_inst_retired.stlb_miss_stores:u                                     (80.00%)
+
+     229.808770751 seconds time elapsed
+
