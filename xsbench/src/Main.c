@@ -6,6 +6,8 @@
 
 int real_main( int argc, char* argv[] )
 {
+   printf("PID : %d\n",getpid());
+
 	// =====================================================================
 	// Initialization & Command Line Read-In
 	// =====================================================================
@@ -139,7 +141,7 @@ int real_main( int argc, char* argv[] )
 		exit(1);
 	}
 	#endif
-        #define CONFIG_SHM_FILE_NAME "/tmp/alloctest-bench"
+        #define CONFIG_SHM_FILE_NAME "/tmp/alloctest-xsbench"
         FILE *fd2 = fopen(CONFIG_SHM_FILE_NAME ".ready", "w");
         if (!fd2) {
             fprintf (stderr, "ERROR: could not create the shared memory file descriptor\n");

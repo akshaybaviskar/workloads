@@ -57,6 +57,7 @@
 ///< the name of the shared memory file created
 #define CONFIG_SHM_FILE_NAME "/tmp/alloctest-btree"
 
+#define NUMA_MIGN 0
 
 #ifdef _OPENMP
 ///< the number of elements in the tree
@@ -1534,6 +1535,9 @@ static void next(void) {
 
 int real_main(int argc, char ** argv) {
 
+   #if NUMA_MIGN
+   numa_run_on_node(0);
+   #endif
 	char * input_file;
 	FILE * fp;
 	node * root;
@@ -1576,6 +1580,9 @@ int real_main(int argc, char ** argv) {
 		exit(-1);
 	}
 
+   #if NUMA_MIGN
+   numa_run_on_node(1);
+   #endif
 	usleep(250);
 
 

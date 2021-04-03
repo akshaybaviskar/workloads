@@ -34,7 +34,7 @@ extern FILE *opt_file_out;
 #ifdef _OPENMP
 #define NUPDATE (1UL << 30)
 #else
-#define NUPDATE (1UL << 30)
+#define NUPDATE (1UL << 32)
 #endif
 
 ///< parameters for ther andom table
@@ -86,9 +86,12 @@ HPCC_starts(int64_t n)
 int real_main(int argc, char *argv[]);
 int real_main(int argc, char *argv[])
 {
+   numa_run_on_node(0);
+   printf("Running on node 0\n");
     //NUPDATE = 1 << strtoul(argv[2], NULL, 10);
     printf("NUPDATE set to %ul %x\n", strtoul(argv[2], NULL, 10), NUPDATE);
     size_t mem = ((size_t)64UL << 30);
+    printf("mem set to %u\n", mem);
     if (argc == 2) {
         mem = strtoull(argv[1], NULL, 10) << 30;    
     }
@@ -128,7 +131,9 @@ int real_main(int argc, char *argv[])
         fprintf (stderr, "ERROR: could not create the shared memory file descriptor\n");
         exit(-1);
     }
-
+   numa_run_on_node(1);
+   printf("Running on node 1\n");
+ 
     usleep(250);
 
 
